@@ -14,13 +14,13 @@ A collection of .NET RESTful APIs that provides information on New Zealand's wal
 
 ## Features
 
-- **CRUD Operations:** Full Create, Read, Update, and Delete functionality for walk and trail data.
+- **CRUD Operations:** Full Create, Read, Update, and Delete functionality for walk and Regions data.
 - **Secure Authentication & Authorization:** JWT-based security for protected endpoints.
 - **Data Validation:** Ensures incoming data meets required structure and integrity.
 - **Error Handling:** Consistent error responses for seamless client-side handling.
 - **Scalability:** Designed to scale with ease for additional endpoints and data sources.
 
-## Technologies
+## Packages
 
 ![image](https://github.com/user-attachments/assets/9851c864-4135-41d6-8df5-698fe819bed7)
 
