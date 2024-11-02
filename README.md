@@ -28,7 +28,7 @@ A collection of .NET RESTful APIs that provides information on New Zealand's wal
 
 ### Prerequisites
 
-- [.NET SDK 6.0](https://dotnet.microsoft.com/download/dotnet/6.0)
+- [.NET SDK 8.0](https://dotnet.microsoft.com/download/dotnet/8.0)
 - SQL Server (local or cloud instance)
 - Postman or any REST client (for testing)
 
