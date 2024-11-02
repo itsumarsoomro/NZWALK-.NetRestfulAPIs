@@ -1,95 +1,123 @@
-NZWALK .NET RESTful APIs
-This repository contains the NZWALK project, a collection of .NET RESTful APIs designed to provide information on walks, trails, and natural landmarks across New Zealand. Built using .NET, this project serves as a robust backend for applications needing access to New Zealand’s rich walk data, complete with CRUD operations and secure authentication.
+# NZWALK .NET RESTful APIs
 
-Table of Contents
-Features
-Technologies
-Setup
-Usage
-API Endpoints
-Contributing
-License
-Features
-CRUD Operations: Fully implemented CRUD functionality for managing walk data.
-Authentication & Authorization: Secure access using JWT for API endpoints.
-Data Validation: Validates incoming data for API endpoints to ensure data integrity.
-Error Handling: Consistent error handling for predictable API responses.
-Scalability: Designed for scalability and extensibility.
-Technologies
-.NET Core 6.0 – Backend framework
-Entity Framework Core – ORM for database interactions
-SQL Server – Primary database for storing walk information
-JWT – JSON Web Tokens for secure access control
-Setup
-Prerequisites
-.NET SDK 6.0
-SQL Server
-Postman or any REST API client (for testing)
-Installation
-Clone the repository:
+A collection of .NET RESTful APIs that provides information on New Zealand's walks, trails, and natural landmarks. This project includes secure, reliable endpoints to manage and access walk data for applications featuring New Zealand's natural beauty.
 
-bash
-Copy code
-git clone https://github.com/itsumarsoomro/NZWALK-.NetRestfulAPIs.git
-cd NZWALK-.NetRestfulAPIs
-Install Dependencies: Restore NuGet packages by running:
+## Table of Contents
 
-bash
-Copy code
-dotnet restore
-Database Setup:
+- [Features](#features)
+- [Technologies](#technologies)
+- [Setup](#setup)
+- [Usage](#usage)
+- [API Endpoints](#api-endpoints)
+- [Contributing](#contributing)
+- [License](#license)
 
-Configure your SQL Server connection string in appsettings.json:
-json
-Copy code
-"ConnectionStrings": {
-  "DefaultConnection": "Server=YOUR_SERVER;Database=NZWalksDB;Trusted_Connection=True;"
-}
-Run the migrations to create the database schema:
-bash
-Copy code
-dotnet ef database update
-Run the Application:
+## Features
 
-bash
-Copy code
-dotnet run
-The API should now be running on http://localhost:5000.
+- **CRUD Operations:** Full Create, Read, Update, and Delete functionality for walk and trail data.
+- **Secure Authentication & Authorization:** JWT-based security for protected endpoints.
+- **Data Validation:** Ensures incoming data meets required structure and integrity.
+- **Error Handling:** Consistent error responses for seamless client-side handling.
+- **Scalability:** Designed to scale with ease for additional endpoints and data sources.
 
-Usage
-Test the API using Postman or any REST client. You can use the API Endpoints section as a guide to the available routes and parameters.
+## Technologies
 
-Authentication
-The API uses JWT tokens for authentication. You’ll need to obtain a token by sending a login request to the authentication endpoint and including it in your requests as a Bearer token.
+- **.NET Core 6.0** – Framework for building robust APIs
+- **Entity Framework Core** – ORM for database management
+- **SQL Server** – Database for storing walk, trail, and region data
+- **JWT Authentication** – Secure token-based access control
 
-API Endpoints
-Here’s a quick overview of the main endpoints. Please note that paths may require authentication.
+## Setup
 
-Authentication
-POST /api/auth/login – Authenticate a user and receive a JWT token.
-Walks
-GET /api/walks – Retrieve a list of all walks.
-GET /api/walks/{id} – Retrieve details for a specific walk by ID.
-POST /api/walks – Create a new walk (requires authentication).
-PUT /api/walks/{id} – Update an existing walk (requires authentication).
-DELETE /api/walks/{id} – Delete a walk by ID (requires authentication).
-Trails
-GET /api/trails – List all trails.
-GET /api/trails/{id} – Retrieve details for a specific trail.
-POST /api/trails – Create a new trail (requires authentication).
-PUT /api/trails/{id} – Update an existing trail (requires authentication).
-DELETE /api/trails/{id} – Delete a trail by ID (requires authentication).
-Regions
-GET /api/regions – List all regions.
-GET /api/regions/{id} – Retrieve details for a specific region.
-Contributing
-Contributions are welcome! Please follow these steps:
+### Prerequisites
 
-Fork the repository.
-Create a feature branch (git checkout -b feature-name).
-Commit your changes (git commit -m "Add feature").
-Push to the branch (git push origin feature-name).
-Open a pull request.
-License
-This project is licensed under the MIT License.
+- [.NET SDK 6.0](https://dotnet.microsoft.com/download/dotnet/6.0)
+- SQL Server (local or cloud instance)
+- Postman or any REST client (for testing)
 
+### Installation
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/itsumarsoomro/NZWALK-.NetRestfulAPIs.git
+   cd NZWALK-.NetRestfulAPIs
+   ```
+
+2. **Install Dependencies:**
+   ```bash
+   dotnet restore
+   ```
+
+3. **Database Setup:**
+   * Update the SQL Server connection string in `appsettings.json`:
+     ```json
+     {
+       "ConnectionStrings": {
+         "DefaultConnection": "Server=YOUR_SERVER;Database=NZWalksDB;Trusted_Connection=True;"
+       }
+     }
+     ```
+   * Run migrations to create the database schema:
+     ```bash
+     dotnet ef database update
+     ```
+
+4. **Run the Application:**
+   ```bash
+   dotnet run
+   ```
+   The API will be running at `http://localhost:5000`.
+
+## Usage
+
+Use Postman or any REST client to test the API. Refer to the API Endpoints section for routes and parameters.
+
+### Authentication
+
+The API uses JWT tokens for secure access. Obtain a token from the login endpoint and include it as a Bearer token in your requests.
+
+## API Endpoints
+
+### Authentication
+* `POST /api/auth/login` - Authenticate and receive a JWT token.
+
+### Walks
+* `GET /api/walks` - Get all walks.
+* `GET /api/walks/{id}` - Get details for a specific walk.
+* `POST /api/walks` - Create a new walk (requires authentication).
+* `PUT /api/walks/{id}` - Update a walk (requires authentication).
+* `DELETE /api/walks/{id}` - Delete a walk (requires authentication).
+
+### Trails
+* `GET /api/trails` - List all trails.
+* `GET /api/trails/{id}` - Get details for a specific trail.
+* `POST /api/trails` - Add a new trail (requires authentication).
+* `PUT /api/trails/{id}` - Update a trail (requires authentication).
+* `DELETE /api/trails/{id}` - Remove a trail (requires authentication).
+
+### Regions
+* `GET /api/regions` - List all regions.
+* `GET /api/regions/{id}` - Retrieve details for a specific region.
+
+## Contributing
+
+Contributions are welcome! To contribute:
+
+1. **Fork the repository**
+2. **Create a new feature branch:**
+   ```bash
+   git checkout -b feature-name
+   ```
+3. **Commit your changes:**
+   ```bash
+   git commit -m "Add feature description"
+   ```
+4. **Push the branch:**
+   ```bash
+   git push origin feature-name
+   ```
+5. **Open a pull request**
+
+## License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
