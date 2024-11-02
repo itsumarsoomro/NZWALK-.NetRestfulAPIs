@@ -22,10 +22,7 @@ A collection of .NET RESTful APIs that provides information on New Zealand's wal
 
 ## Technologies
 
-- **.NET Core 6.0** – Framework for building robust APIs
-- **Entity Framework Core** – ORM for database management
-- **SQL Server** – Database for storing walk, trail, and region data
-- **JWT Authentication** – Secure token-based access control
+![image](https://github.com/user-attachments/assets/9851c864-4135-41d6-8df5-698fe819bed7)
 
 ## Setup
 
@@ -66,7 +63,7 @@ A collection of .NET RESTful APIs that provides information on New Zealand's wal
    ```bash
    dotnet run
    ```
-   The API will be running at `http://localhost:5000`.
+   The API will be running at `http://localhost:7033`.
 
 ## Usage
 
@@ -79,25 +76,29 @@ The API uses JWT tokens for secure access. Obtain a token from the login endpoin
 ## API Endpoints
 
 ### Authentication
-* `POST /api/auth/login` - Authenticate and receive a JWT token.
+* `POST /api/auth/Login` - Authenticate and receive a JWT token.
+* `POST /api/auth/Register` - Register
 
+### Images
+* `POST /api/Images/Upload` - Upload Images
+
+### Student
+* `GET /api/Student` - Get all student.
+* 
 ### Walks
-* `GET /api/walks` - Get all walks.
-* `GET /api/walks/{id}` - Get details for a specific walk.
-* `POST /api/walks` - Create a new walk (requires authentication).
-* `PUT /api/walks/{id}` - Update a walk (requires authentication).
-* `DELETE /api/walks/{id}` - Delete a walk (requires authentication).
-
-### Trails
-* `GET /api/trails` - List all trails.
-* `GET /api/trails/{id}` - Get details for a specific trail.
-* `POST /api/trails` - Add a new trail (requires authentication).
-* `PUT /api/trails/{id}` - Update a trail (requires authentication).
-* `DELETE /api/trails/{id}` - Remove a trail (requires authentication).
+* `GET /api/Walks` - Get all walks.
+* `GET /api/Walks/{id}` - Get details for a specific walk.
+* `POST /api/Walks` - Create a new walk (requires authentication).
+* `PUT /api/Walks/{id}` - Update a walk (requires authentication).
+* `DELETE /api/Walks/{id}` - Delete a walk (requires authentication).
 
 ### Regions
-* `GET /api/regions` - List all regions.
-* `GET /api/regions/{id}` - Retrieve details for a specific region.
+* `GET /api/Regions` - List all regions.
+* `GET /api/Regions/{id}` - Retrieve details for a specific region by id.
+* `GET /api/Regions/{code}` - Retrieve details for a specific region by code.
+* `POST /api/Regions` - Create a new Regions (requires authentication).
+* `PUT /api/Regions/{id}` - Update a Regions (requires authentication).
+* `DELETE /api/Regions/{id}` - Delete a Regions (requires authentication).
 
 ## Contributing
 
