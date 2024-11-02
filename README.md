@@ -5,7 +5,7 @@ A collection of .NET RESTful APIs that provides information on New Zealand's wal
 ## Table of Contents
 
 - [Features](#features)
-- [Technologies](#technologies)
+- [Packages](#packages)
 - [Setup](#setup)
 - [Usage](#usage)
 - [API Endpoints](#api-endpoints)
